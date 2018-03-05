@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 A tkinter gui for timing gw2 fractal runs and marathons.
