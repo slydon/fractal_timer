@@ -62,10 +62,12 @@ MAP_TO_NAME = {
      960: "Captain Mai Trin Boss",
     1164: "Chaos",
      952: "Cliffside",
+    1290: "Deepstone",
      959: "Molten Boss",
      955: "Molten Furnace",
     1177: "Nightmare",
     1205: "Shattered Observatory",
+    1309: "Siren's Reef",
      948: "Snowblind",
      958: "Solid Ocean",
      949: "Swampland",
@@ -74,8 +76,7 @@ MAP_TO_NAME = {
      947: "Uncategorized",
      953: "Underground Facility",
      950: "Urban Battleground",
-     954: "Volcanic",
-    1290: "Deepstone"
+     954: "Volcanic"
 }
 
 # From https://wiki.guildwars2.com/wiki/Fractals_of_the_Mists
@@ -83,22 +84,23 @@ MAP_TO_LEVELS = {
      956: [14, 46, 65, 71, 96],
      951: [7, 26, 61, 76],
      960: [18, 42, 73, 95],
-    1164: [13, 30, 38, 54, 63, 88, 98],
+    1164: [13, 30, 38, 63, 88, 98],
      952: [6, 22, 47, 69, 82, 94],
+    1290: [11, 33, 67, 84],
      959: [10, 40, 70, 90],
      955: [9, 23, 39, 58, 83],
     1177: [24, 49, 74, 99, 101],
     1205: [25, 50, 75, 100, 102],
-     948: [3, 27, 37, 51, 68, 86, 93],
+    1309: [12, 37, 54, 78],
+     948: [3, 27, 51, 68, 86, 93],
      958: [20, 35, 45, 60, 80],
      949: [5, 21, 32, 56, 77, 89],
      957: [15, 34, 48, 55, 64, 97],
     1267: [16, 41, 59, 87],
-     947: [2, 12, 36, 44, 62, 79, 91],
+     947: [2, 36, 44, 62, 79, 91],
      953: [8, 17, 29, 43, 53, 81],
-     950: [4, 31, 57, 66, 78, 85],
-     954: [1, 19, 28, 52, 72, 92],
-    1290: [11, 33, 67, 84]
+     950: [4, 31, 57, 66, 85],
+     954: [1, 19, 28, 52, 72, 92]
 }
 
 LEVEL_TO_MAP = {l: m for m, v in MAP_TO_LEVELS.items() for l in v}
@@ -152,7 +154,6 @@ class FractalState(object):
                 self.log('instance stop', now)
 
         return self.total_time(now), self.current_map_name, self.instance_time(now)
-            
 
     def stop(self):
         now = int(time())
